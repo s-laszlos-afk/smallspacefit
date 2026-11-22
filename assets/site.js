@@ -1,6 +1,6 @@
 // Central affiliate config. Set AFFILIATE_TAG after the Amazon Associates
 // account exists (e.g. "smallspacefit-20") — all Amazon links get it appended.
-var AFFILIATE_TAG = "";
+var AFFILIATE_TAG = "smallspace0b8-20";
 
 (function () {
   if (AFFILIATE_TAG) {
