@@ -1,0 +1,128 @@
+:root {
+  --bg: #faf9f6;
+  --surface: #ffffff;
+  --ink: #1c2321;
+  --muted: #5c6662;
+  --accent: #1f6f54;
+  --accent-ink: #ffffff;
+  --border: #e4e2dc;
+  --badge-bg: #eef5f1;
+  --max: 760px;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #151a18;
+    --surface: #1d2422;
+    --ink: #e8ebe9;
+    --muted: #9aa5a0;
+    --accent: #4fb08c;
+    --accent-ink: #0d1411;
+    --border: #2b3330;
+    --badge-bg: #223029;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.65;
+  font-size: 17px;
+}
+header.site {
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+}
+.site-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 14px 16px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.brand { font-weight: 800; font-size: 1.15rem; letter-spacing: -0.02em; color: var(--ink); text-decoration: none; }
+.brand span { color: var(--accent); }
+nav.main a { color: var(--muted); text-decoration: none; margin-left: 16px; font-size: 0.95rem; }
+nav.main a:hover { color: var(--accent); }
+main { max-width: var(--max); margin: 0 auto; padding: 24px 16px 48px; }
+h1 { font-size: 1.9rem; line-height: 1.2; letter-spacing: -0.02em; margin: 0.4em 0; }
+h2 { font-size: 1.35rem; margin-top: 1.8em; letter-spacing: -0.01em; }
+h3 { font-size: 1.1rem; margin-top: 1.5em; }
+a { color: var(--accent); }
+.meta { color: var(--muted); font-size: 0.9rem; }
+.disclosure {
+  background: var(--badge-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 18px 0;
+}
+.lead { font-size: 1.1rem; color: var(--muted); }
+.table-wrap { overflow-x: auto; margin: 20px -16px; padding: 0 16px; }
+table { border-collapse: collapse; width: 100%; min-width: 560px; font-size: 0.92rem; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; }
+th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+th { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); }
+tr:last-child td { border-bottom: none; }
+.badge {
+  display: inline-block;
+  background: var(--badge-bg);
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.product {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 18px 20px;
+  margin: 22px 0;
+}
+.product h3 { margin: 0 0 4px; }
+.product .tier { color: var(--muted); font-size: 0.9rem; margin-bottom: 8px; }
+.pros-cons { display: flex; gap: 20px; flex-wrap: wrap; margin: 12px 0; }
+.pros-cons ul { margin: 6px 0; padding-left: 20px; font-size: 0.95rem; }
+.pros-cons strong { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); }
+a.buy {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--accent-ink);
+  font-weight: 700;
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  margin-top: 6px;
+}
+a.buy:hover { filter: brightness(1.08); }
+.cards { display: grid; grid-template-columns: 1fr; gap: 16px; margin: 24px 0; }
+@media (min-width: 600px) { .cards { grid-template-columns: 1fr 1fr; } }
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 18px 20px;
+}
+.card h2, .card h3 { margin-top: 0; }
+.card a.cta { font-weight: 700; text-decoration: none; }
+footer.site {
+  border-top: 1px solid var(--border);
+  margin-top: 40px;
+  padding: 24px 16px 40px;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+footer.site .site-inner { display: block; }
+footer.site a { color: var(--muted); }
+.faq dt { font-weight: 700; margin-top: 16px; }
+.faq dd { margin: 4px 0 0; color: var(--muted); }
